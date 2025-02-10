@@ -142,6 +142,7 @@ const EtDatePicker: React.FC<EtDatePickerProps> = ({
           minDate={props.minDate}
           maxDate={props.maxDate}
           value={date}
+          dateType={dateType}
         >
           <EtGrDateCalendar />
         </EtDatePickerProvider>

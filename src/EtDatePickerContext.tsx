@@ -3,6 +3,7 @@ import { EtDateFieldProps } from "./EtDatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { set } from "date-fns";
+import { DateType } from "./util/EthiopianDateUtils";
 
 type EtDatePickerContextType = {
   value?: Date;
@@ -11,6 +12,7 @@ type EtDatePickerContextType = {
   setGregDate: (date: Date) => void;
   onMonthChange: (date: Date) => void;
   onDateChange: (date: Date) => void;
+  dateType?: DateType;
 } & EtDateFieldProps;
 
 const EtDatePickerContext = createContext<EtDatePickerContextType>({
@@ -20,13 +22,14 @@ const EtDatePickerContext = createContext<EtDatePickerContextType>({
   setGregDate: (date: Date) => {},
   onMonthChange: (date: Date) => {},
   onDateChange: (date: Date) => {},
+  dateType: "EN",
 });
 
 type EtDatePickerProviderProps = {
   children: ReactNode;
   onChange?: (date: Date) => void;
-
   value?: Date;
+  dateType?: DateType;
 } & EtDateFieldProps;
 
 const EtDatePickerProvider: React.FC<EtDatePickerProviderProps> = ({
@@ -37,6 +40,7 @@ const EtDatePickerProvider: React.FC<EtDatePickerProviderProps> = ({
   disablePast,
   minDate,
   maxDate,
+  dateType,
 }) => {
   const [date, setDate] = useState<Date>();
   const [monthValue, setMonthValue] = useState<Date>();
@@ -72,6 +76,7 @@ const EtDatePickerProvider: React.FC<EtDatePickerProviderProps> = ({
           disablePast,
           minDate,
           maxDate,
+          dateType,
         }}
       >
         {children}

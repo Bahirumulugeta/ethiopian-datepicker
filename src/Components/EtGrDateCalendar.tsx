@@ -18,6 +18,7 @@ const EtGrDateCalendar = () => {
     onMonthChange,
     gregDate,
     setGregDate,
+    dateType,
   } = etDatePickerContext;
 
   const gregDateValue = gregDate?.toLocaleDateString();
@@ -35,8 +36,9 @@ const EtGrDateCalendar = () => {
     onDateChange(new Date());
   };
 
-  const { disableEt, disableGregorian } = useEtLocalization();
-
+  // const { disableEt, disableGregorian } = useEtLocalization();
+  const disableEt = dateType === "EN";
+  const disableGregorian = dateType === "AMH";
   return (
     <Box sx={{ minWidth: !disableEt && !disableGregorian ? 610 : undefined }}>
       <Box display={"flex"}>
@@ -53,7 +55,7 @@ const EtGrDateCalendar = () => {
         {!disableEt && !disableGregorian && (
           <Divider orientation="vertical" flexItem />
         )}
-        {/* {!disableGregorian && (
+        {!disableGregorian && (
           <Box width={295} mr={disableEt ? 2 : 0}>
             <Box width={295} pr={4}>
               <DateCalendar
@@ -75,7 +77,7 @@ const EtGrDateCalendar = () => {
               />
             </Box>
           </Box>
-        )} */}
+        )}
       </Box>
       <Box
       // sx={{
