@@ -19,9 +19,7 @@ const react_1 = require("react");
 const react_2 = __importDefault(require("react"));
 const format_1 = __importDefault(require("date-fns/format"));
 const icons_material_1 = require("@mui/icons-material");
-const EtDatePickerContext_1 = require("./EtDatePickerContext");
 const EthiopianDateUtils_1 = require("./util/EthiopianDateUtils");
-const EtGrDateCalendar_1 = __importDefault(require("./Components/EtGrDateCalendar"));
 const EtLocalizationProvider_1 = require("./EtLocalizationProvider");
 const EtDatePicker = (_a) => {
     var { onClick, value, onChange } = _a, props = __rest(_a, ["onClick", "value", "onChange"]);
@@ -75,11 +73,6 @@ const EtDatePicker = (_a) => {
                 endAdornment: (react_2.default.createElement(material_1.InputAdornment, { position: "end" },
                     react_2.default.createElement(material_1.IconButton, { onClick: handleClick, disabled: props.disabled },
                         react_2.default.createElement(icons_material_1.EventOutlined, null)))),
-            } })),
-        react_2.default.createElement(material_1.Menu, { id: "basic-menu", anchorEl: anchorEl, open: open, onClose: handleClose, MenuListProps: {
-                "aria-labelledby": "basic-button",
-            } },
-            react_2.default.createElement(EtDatePickerContext_1.EtDatePickerProvider, { onChange: handleDateChange, disableFuture: props.disableFuture, disablePast: props.disablePast, minDate: props.minDate, maxDate: props.maxDate, value: date },
-                react_2.default.createElement(EtGrDateCalendar_1.default, null)))));
+            } }))));
 };
 exports.default = EtDatePicker;

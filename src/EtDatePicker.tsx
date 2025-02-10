@@ -126,7 +126,7 @@ const EtDatePicker: React.FC<EtDatePickerProps> = ({
           ),
         }}
       />
-      <Menu
+      {/* <Menu
         id="basic-menu"
         anchorEl={anchorEl}
         open={open}
@@ -145,7 +145,7 @@ const EtDatePicker: React.FC<EtDatePickerProps> = ({
         >
           <EtGrDateCalendar />
         </EtDatePickerProvider>
-      </Menu>
+      </Menu> */}
     </>
   );
 };
