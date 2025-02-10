@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const material_1 = require("@mui/material");
-const x_date_pickers_1 = require("@mui/x-date-pickers");
 const react_1 = require("react");
 const EthiopianDateCalendar_1 = __importDefault(require("./EthiopianDateCalendar"));
 const EtDatePickerContext_1 = require("../EtDatePickerContext");
@@ -29,19 +28,7 @@ const EtGrDateCalendar = () => {
         react_2.default.createElement(material_1.Box, { display: "flex" },
             !disableEt && (react_2.default.createElement(material_1.Box, { width: 295, display: "flex", flexDirection: "column", mr: disableGregorian ? 2 : 1 },
                 react_2.default.createElement(EthiopianDateCalendar_1.default, null))),
-            !disableEt && !disableGregorian && (react_2.default.createElement(material_1.Divider, { orientation: "vertical", flexItem: true })),
-            !disableGregorian && (react_2.default.createElement(material_1.Box, { width: 295, mr: disableEt ? 2 : 0 },
-                react_2.default.createElement(material_1.Box, { width: 295, pr: 4 },
-                    react_2.default.createElement(x_date_pickers_1.DateCalendar, { monthsPerRow: 3, value: gregDatePicker, onChange: (date) => {
-                            if (date && date instanceof Date)
-                                onDateChange(date);
-                        }, disableFuture: disableFuture, onMonthChange: (date) => {
-                            var _a;
-                            const newDate = new Date(date);
-                            newDate.setDate((_a = gregDate === null || gregDate === void 0 ? void 0 : gregDate.getDate()) !== null && _a !== void 0 ? _a : 15);
-                            onMonthChange(newDate);
-                            setGregDate(newDate);
-                        }, disablePast: disablePast, minDate: minDate, maxDate: maxDate }))))),
+            !disableEt && !disableGregorian && (react_2.default.createElement(material_1.Divider, { orientation: "vertical", flexItem: true }))),
         react_2.default.createElement(material_1.Box
         // sx={{
         //   flexGrow: 1,

@@ -53,7 +53,7 @@ const EtGrDateCalendar = () => {
         {!disableEt && !disableGregorian && (
           <Divider orientation="vertical" flexItem />
         )}
-        {!disableGregorian && (
+        {/* {!disableGregorian && (
           <Box width={295} mr={disableEt ? 2 : 0}>
             <Box width={295} pr={4}>
               <DateCalendar
@@ -75,7 +75,7 @@ const EtGrDateCalendar = () => {
               />
             </Box>
           </Box>
-        )}
+        )} */}
       </Box>
       <Box
       // sx={{
