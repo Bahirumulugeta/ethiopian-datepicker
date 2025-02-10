@@ -64,7 +64,7 @@ const useEtLocalization = () => {
         localType: local,
         getLocalMonthName: (m) => "",
         disableEt: false,
-        disableGregorian: true,
+        disableGregorian: false,
         disableSwitcher: false,
     };
 };

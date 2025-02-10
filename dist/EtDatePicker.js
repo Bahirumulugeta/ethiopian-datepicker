@@ -79,7 +79,7 @@ const EtDatePicker = (_a) => {
         react_2.default.createElement(material_1.Menu, { id: "basic-menu", anchorEl: anchorEl, open: open, onClose: handleClose, MenuListProps: {
                 "aria-labelledby": "basic-button",
             } },
-            react_2.default.createElement(EtDatePickerContext_1.EtDatePickerProvider, { onChange: handleDateChange, disableFuture: props.disableFuture, disablePast: props.disablePast, minDate: props.minDate, maxDate: props.maxDate, value: date },
+            react_2.default.createElement(EtDatePickerContext_1.EtDatePickerProvider, { onChange: handleDateChange, disableFuture: props.disableFuture, disablePast: props.disablePast, minDate: props.minDate, maxDate: props.maxDate, value: date, dateType: dateType },
                 react_2.default.createElement(EtGrDateCalendar_1.default, null)))));
 };
 exports.default = EtDatePicker;

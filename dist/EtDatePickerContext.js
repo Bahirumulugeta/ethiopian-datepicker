@@ -44,9 +44,10 @@ const EtDatePickerContext = (0, react_1.createContext)({
     setGregDate: (date) => { },
     onMonthChange: (date) => { },
     onDateChange: (date) => { },
+    dateType: "EN",
 });
 exports.EtDatePickerContext = EtDatePickerContext;
-const EtDatePickerProvider = ({ children, onChange, value, disableFuture, disablePast, minDate, maxDate, }) => {
+const EtDatePickerProvider = ({ children, onChange, value, disableFuture, disablePast, minDate, maxDate, dateType, }) => {
     const [date, setDate] = (0, react_1.useState)();
     const [monthValue, setMonthValue] = (0, react_1.useState)();
     const [gregDate, setGregDate] = (0, react_1.useState)();
@@ -75,6 +76,7 @@ const EtDatePickerProvider = ({ children, onChange, value, disableFuture, disabl
                 disablePast,
                 minDate,
                 maxDate,
+                dateType,
             } }, children)));
 };
 exports.EtDatePickerProvider = EtDatePickerProvider;
