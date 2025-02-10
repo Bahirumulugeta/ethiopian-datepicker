@@ -71,8 +71,8 @@ export const useEtLocalization = () => {
   return {
     localType: local,
     getLocalMonthName: (m: number) => "",
-    disableEt: false,
-    disableGregorian: false,
+    disableEt:  false,
+    disableGregorian: true,
     disableSwitcher: false,
   };
 };
